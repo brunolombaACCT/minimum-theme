@@ -1,0 +1,20 @@
+.nameContainer {
+  padding: 0;
+}
+
+.productBrand {
+  font-size: 12px;
+  color: #343434;
+  margin: 0;
+}
+
+
+.image {
+  max-width: 130px;
+  max-height: 130px;
+  padding: 15px;
+}
+
+.nameContainer {
+  justify-content: start;
+}

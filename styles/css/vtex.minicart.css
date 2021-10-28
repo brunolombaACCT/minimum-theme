@@ -1,0 +1,8 @@
+.openIconContainer {
+  padding: 0;
+}
+
+/* Mobile ----------------------------------*/
+.minicartContainer :global(.vtex-button__label) {
+  padding-left: 0;
+}

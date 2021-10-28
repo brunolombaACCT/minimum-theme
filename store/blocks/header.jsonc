@@ -14,10 +14,160 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop"]
+    "children": [
+      "flex-layout.row#header",
+      "flex-layout.row#departamento"
+    ]
   },
-  "flex-layout.row#desktop": {
+
+  "flex-layout.row#header": {
     "props": {
+      "blockClass": "container-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-rihappy",
+      "flex-layout.col#logo-princesas",
+      "flex-layout.col#login"
+    ]
+  },
+  
+  "flex-layout.col#logo-rihappy": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "grow"
+    },
+    "children": ["flex-layout.row#logo"]
+  },
+
+  "flex-layout.row#logo": {
+    "children": ["logo", "rich-text#location"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["logo"]
+    }
+  },
+
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://rihappynovo.vteximg.com.br/arquivos/logo_rihappy.png",
+      "width": 138
+    }
+  },
+
+  "rich-text#location": {
+    "props": {
+      "blockClass": ["location"],
+      "font": "t-body",
+      "text": "Preços válidos para:\n **São Paulo - SP** [alterar]()",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-action-primary",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.col#logo-princesas": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "grow"
+    },
+    "children": ["image#logo-princesa", "rich-text#text-princess"]
+  },
+
+  "rich-text#text-princess": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Aqui tem tudo de\nDisney Princesa.",
+      "textColor": "c-on-action-primary",
+      "blockClass": "text-princess"
+    }
+  },
+
+  "image#logo-princesa": {
+    "props": {
+      "title": "Logo-princesa",
+      "href": "/",
+      "src": "assets/UPC_logo_A.png",
+      "width": 134
+    }
+  },
+
+  "flex-layout.col#login": {
+    "children": ["flex-layout.row#login"],
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "right",
+      "blockClass": ["login"]
+    }
+  },
+
+  "flex-layout.row#login": {
+    "children": ["image#perfil", "rich-text#text-login", "minicart.v2"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["login"]
+    }
+  },
+
+  "image#perfil": {
+    "props": {
+      "title": "Ícone perfil",
+      "href": "/",
+      "src": "assets/perfil.png",
+      "maxHeight": "40px"
+    }
+  },
+
+  // "login": {
+  //   "props": {
+  //     "optionsTitle": "Olá, Visitante! Faça login ou cadastre-se",
+  //     "identifierPlaceholder": "teste",
+  //     "emailAndPasswordTitle": "LOG-IN",
+  //     "accessCodeTitle": "Acess Code LOG-IN",
+  //     "emailPraceholder": "e-mail",
+  //     "passwordPlaceholder": "password",
+  //     "showPasswordVerificationIntoTooltip": true
+  //   }
+  // },
+  "rich-text#text-login": {
+    "props": {
+      "blockClass": ["text-login"],
+      "font": "t-body",
+      "text": "Olá, visitante!\n Faça **[login](www.google.com)** ou **[cadastre-se](www.google.com)**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-action-primary",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "minicart.v2": {
+    "props": {
+      "MinicartIcon": "image#cart"
+    },
+    "children": ["minicart-base-content"]
+  },
+
+  "image#cart": {
+    "props": {
+      "title": "Ícone cart",
+      "href": "/",
+      "src": "assets/cart.png",
+      "width": 45
+    }
+  },
+
+  "flex-layout.row#departamento": {
+    "props": {
+      "blockClass": "menu",
       "horizontalAlign": "center",
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
@@ -25,55 +175,107 @@
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
-      "flex-layout.col#spacer",
-      "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      "vtex.menu@2.x:menu",
+      "flex-layout.col#spacer"
     ]
   },
+
+  "vtex.menu@2.x:menu": {
+    "children":["image#menu-hamburguer", "menu-item#departamentos"]
+  },
+
+  "image#menu-hamburguer": {
+    "props": {
+      "title": "Ícone hamburguer",
+      "href": "/",
+      "src": "assets/menu-hamburguer.svg",
+      "width": 15
+    }
+  },
+
+  "menu-item#departamentos": {
+    "props": {
+      "id": "menu-item-departamentos",
+      "type": "custom",
+      "iconId": "menu",
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "isActive": true,
+        "noFollow": false,
+        "tagTitle": "Departamentos",
+        "text": "Departamentos"
+      },
+      "blockClass": "menu-departamentos"
+    }
+  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
   },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo"]
-  },
-  "logo": {
-    "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
-    }
-  },
+
   "header-layout.mobile": {
-    "children": ["sticky-layout#mobile"]
+    "children": [
+      "sticky-layout#mobile",
+      "flex-layout.row#mobile-logo-princesas",
+      "rich-text#text-localization"
+    ]
   },
   "sticky-layout#mobile": {
-    "children": ["flex-layout.row#mobile"]
+    "children": [
+      "flex-layout.row#mobile"
+      ]
   },
   "flex-layout.row#mobile": {
     "children": [
       "drawer",
-      "logo",
       "flex-layout.col#spacer",
-      "login",
+      "image#mobile-logo",
+      "flex-layout.col#spacer",
       "minicart.v2"
     ],
     "props": {
       "blockClass": "main-header-mobile",
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "verticalAlign": "center"
     }
   },
+  
   "drawer": {
     "children": []
+  },
+  
+  "flex-layout.row#mobile-logo-princesas": {
+    "children": [
+      "flex-layout.col#logo-princesas"
+    ],
+    "props": {
+      "blockClass": "m-logo-princesas-header"
+    }
+  },
+
+  "image#mobile-logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "src": "assets/logo-rihappy.png",
+      "maxHeight": 32
+    }
+  },
+
+  "rich-text#text-localization": {
+    "props": {
+      "blockClass": ["text-localization"],
+      "font": "t-body",
+      "text": "Preçoas válidos para: **São Paulo - SP** [alterar](www.google.com)",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "CENTER"
+    }
   }
 }

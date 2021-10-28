@@ -1,15 +1,680 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "list-context.image-list#banner",
+      "flex-layout.row#stack-logo-horizontal-produtos-container",
+      "flex-layout.row#title-slider-princesas",
+      "flex-layout.row#container-slider-row",
+      "responsive-layout.desktop#text-presentes",
+      "responsive-layout.mobile#text-ofertas",
+      "tab-layout#filter"
+      // "flex-layout.row#slider-destaques",
+      // "flex-layout.row#container-slider-row-destaques",
+      // "flex-layout.row#background-white",
+      // "flex-layout.row#share"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
+
+  "list-context.image-list#banner": {
+    "children": ["slider-layout#images-banner"],
+    "props": {
+      "height": 400,
+      "images": [
+        {
+          "image": "assets/banner.png",
+          "mobileImage": "assets/banner-ariel.png"
+        },
+        {
+          "image": "assets/banner.png",
+          "mobileImage": "assets/banner-ariel.png"
+        }
+      ]
+    }
+  },
+
+  "slider-layout#images-banner": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "blockClass": "carousel"
+    }
+  },
+
+  "flex-layout.row#stack-logo-horizontal-produtos-container": {
+    "children": ["stack-layout#stack-logo-horizontal-produtos"],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "blockClass": ["stack-container"]
+    }
+  },
+  "stack-layout#stack-logo-horizontal-produtos": {
+    "children": ["rich-text#text-produtos", "image#logo-princesas-horizontal"],
+    "props": {
+      "zIndexOffset": 3,
+      "blockClass": "stack-logo-horizontal-produtos"
+    }
+  },
+  
+  "image#logo-princesas-horizontal": {
+    "props": {
+      "blockClass": ["logo-princesas-horizontal"],
+      "maxWidth": 160,
+      "src": "assets/logo-horizontal.png"
+    }
+  },
+
+  "rich-text#text-produtos": {
+    "props": {
+      "blockClass": ["text-produtos"],
+      "font": "t-body",
+      "text": "produtos",
+      "textAlignment": "RIGHT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.row#title-slider-princesas": {
+    "children": ["rich-text#text-title-princesas-1", "rich-text#text-title-princesas-2"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["title-slider-princesas"]
+    }
+  },
+
+  "rich-text#text-title-princesas-1": {
+    "props": {
+      "blockClass": ["text-title-princesas-1"],
+      "font": "t-body",
+      "text": "**Encontre sua** &nbsp;",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#text-title-princesas-2": {
+    "props": {
+      "blockClass": ["text-title-princesas-2"],
+      "font": "t-body",
+      "text": " **Princesa da Disney**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.row#container-slider-row": {
+    "children": ["slider-layout#avatar-princesas"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "blockClass": ["container-slider-row"]
+    }
+  },
+
+  "slider-layout#avatar-princesas": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 7,
+        "tablet": 5,
+        "phone": 4
+      },
+      "infinite": false,
+      "navigationStep": 1,
+      "centerMode": "center",
+      "showNavigationArrows": "always",
+      "showPaginationDots": "never",
+      "blockClass": "carousel-avatar-princesas"
+    },
+    "children": [
+      "flex-layout.col#mulan", 
+      "flex-layout.col#pocahontas",
+      "flex-layout.col#mulan", 
+      "flex-layout.col#pocahontas",
+      "flex-layout.col#mulan", 
+      "flex-layout.col#pocahontas",
+      "flex-layout.col#mulan", 
+      "flex-layout.col#pocahontas",
+      "flex-layout.col#mulan", 
+      "flex-layout.col#pocahontas"
+    ]
+  },
+
+  "flex-layout.col#mulan": {
+    "children": ["image#mulan", "rich-text#text-mulan"],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["col-mulan"]
+    }
+  },
+  "image#mulan": {
+    "props": {
+      "blockClass": ["mulan"],
+      "maxHeight": 100,
+      "src": "assets/mulan.png"
+    }
+  },
+  "rich-text#text-mulan": {
+    "props": {
+      "blockClass": ["text-mulan"],
+      "font": "t-body",
+      "text": "Mulan",
       "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "textColor": "c-on-base--inverted",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "flex-layout.col#pocahontas": {
+    "children": ["image#pocahontas", "rich-text#text-pocahontas"],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["mulan"]
+    }
+  },
+
+  "image#pocahontas": {
+    "props": {
+      "blockClass": ["pocahontas"],
+      "maxHeight": 100,
+      "src": "assets/pocahontas.png"
+    }
+  },
+
+  "rich-text#text-pocahontas": {
+    "props": {
+      "blockClass": ["text-pocahontas"],
+      "font": "t-body",
+      "text": "Pocahontas",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "responsive-layout.desktop#text-presentes": {
+    "children": [
+      "flex-layout.row#text-presentes"
+    ]
+  },
+
+  "flex-layout.row#text-presentes": {
+    "children": ["rich-text#text-presentes1", "rich-text#text-presentes2"],
+    "props": {
+      "blockClass": ["text-presentes"]
+    }
+  },
+  "rich-text#text-presentes1": {
+    "props": {
+      "blockClass": ["text-presentes1-bold"],
+      "font": "t-body",
+      "text": "**Já quer garantir o seu presente?**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#text-presentes2": {
+    "props": {
+      "blockClass": ["text-presentes"],
+      "font": "t-body",
+      "text": "Os presentes favoritos desse Natal estão aqui!",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "responsive-layout.mobile#text-ofertas": {
+    "children": [
+      "rich-text#text-ofertas1",
+      "rich-text#text-ofertas2"
+    ]
+  },
+
+  "rich-text#text-ofertas1": {
+    "props": {
+      "blockClass": ["text-ofertas1-bold"],
+      "font": "t-body",
+      "text": "**Encontre as melhores ofertas**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#text-ofertas2": {
+    "props": {
+      "blockClass": ["text-ofertas2"],
+      "font": "t-body",
+      "text": "No mundo das Princaesas Disney tem de tudo!",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "tab-layout#filter": {
+    "children":[
+      "tab-list#filters",
+      "tab-content#products"
+    ],
+    "props": {
+      "blockClass": "filter-produtcs",
+      "defaultActiveId": "preferidos-natal"
+    }
+  },
+  "tab-list#filters": {
+    "children": [
+      "tab-list.item#preferidos-natal",
+      "tab-list.item#mais-vendidos",
+      "tab-list.item#lancamentos"
+    ],
+    "props": {
+      "blockClass": "filters"
+    }
+  },
+  "tab-list.item#preferidos-natal": {
+    "props": {
+      "tabId": "preferidos-natal",
+      "label": "Preferidos do Natal",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#mais-vendidos": {
+    "props": {
+      "tabId": "mais-vendidos",
+      "label": "Mais Vendidos"
+    }
+  },
+  "tab-list.item#lancamentos": {
+    "props": {
+      "tabId": "lancamentos",
+      "label": "Últimos Lançamentos"
+    }
+  },
+
+  "tab-content#products": {
+    "children": [
+      "tab-content.item#products"
+    ],
+    "props": {
+      "tabId": "preferidos-natal"
+    }
+  },
+  "tab-content.item#products": {
+    "children": [
+      "flex-layout.row#shelf"
+    ]
+  },
+
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout-group#test"],
+    "props": {
+      "collection": "150",
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+
+  "slider-layout-group#test": {
+    "children": [
+      "slider-layout#demo-products",
+      "slider-layout#demo-products2"
+    ]
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": false,
+      "centerMode": "to-the-left",
+      "showNavigationArrows": "never",
+      "usePagination": false,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "slider-layout#demo-products2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": false,
+      "centerMode": "to-the-left",
+      "showNavigationArrows": "never",
+      "usePagination": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "flex-layout.row#slider-destaques": {
+    "children": ["flex-layout.row#title-slider-destaques"],
+    "props": {
+      "blockClass": ["slider-destaques"]
+    }
+  },
+
+  "flex-layout.row#title-slider-destaques": {
+    "children": ["rich-text#text-title-destaques-1", "rich-text#text-title-destaques-2"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["title-slider-destaques"]
+    }
+  },
+
+  "rich-text#text-title-destaques-1": {
+    "props": {
+      "blockClass": ["text-title-destaques-1"],
+      "font": "t-body",
+      "text": "**Destaques das** &nbsp;",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base--inverted",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "rich-text#text-title-destaques-2": {
+    "props": {
+      "blockClass": ["text-title-destaques-2"],
+      "font": "t-body",
+      "text": " **Princesas**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.row#container-slider-row-destaques": {
+    "children": ["slider-layout#destaques"],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "blockClass": ["container-slider-row-destaques"]
+    }
+  },
+  
+  "slider-layout#destaques": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": false,
+      "navigationStep": 2,
+      "centerMode": "to-the-left",
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "blockClass": "carousel-destaques"
+    },
+    "children": [
+      "image#destaques",
+      "image#destaques",
+      "image#destaques",
+      "image#destaques",
+      "image#destaques",
+      "image#destaques"
+    ]
+  },
+
+  "image#destaques": {
+    "props": {
+      "blockClass": ["destaques"],
+      "maxHeight": 200,
+      "src": "assets/destaques.png"
+    }
+  },
+  
+  "flex-layout.row#background-white":{
+    "props": {
+      "blockClass": "background-white"
+    }
+  },
+
+  "flex-layout.row#share": {
+    "children": ["flex-layout.col#share-container"],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["row-share"]
+    }
+  },
+
+  "flex-layout.col#share-container": {
+    "children": [
+      "flex-layout.row#logo-text",
+      "flex-layout.row#share-text-slider1",
+      "flex-layout.row#container-slider-share1",
+      "flex-layout.row#share-text-slider2",
+      "flex-layout.row#container-slider-share1"
+    ],
+    "props": {
+      "blockClass": ["share-container"]
+    }
+  },
+
+  "flex-layout.row#logo-text": {
+    "children": [
+      "flex-layout.col#logo-text"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["logo-text"]
+    }
+  },
+
+  "flex-layout.col#logo-text": {
+    "children": [
+      "image#logo-share",
+      "rich-text#text-share1",
+      "rich-text#text-share2"
+    ],
+    "props": {
+      "blockClass": ["logo-text"]
+    }
+  },
+
+  "image#logo-share": {
+    "props": {
+      "blockClass": ["logo-share"],
+      "src": "assets/logo-share.png"
+    }
+  },
+  "rich-text#text-share1": {
+    "props": {
+      "blockClass": ["text-share1"],
+      "font": "t-body",
+      "text": "**Divirta-se com sua Princesa favorita.**",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-action-primary",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "rich-text#text-share2": {
+    "props": {
+      "blockClass": ["text-share2"],
+      "font": "t-body",
+      "text": "Encontre brincadeiras, atividades e\n muito conteúdo para brincar!",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-action-primary",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "flex-layout.row#share-text-slider1": {
+    "children": ["rich-text#especiais-frozen"],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": ["share-slider1"]
+    }
+  },
+  "rich-text#especiais-frozen": {
+    "props": {
+      "blockClass": ["especiais-frozen"],
+      "font": "t-body",
+      "text": "Especiais da **Frozen**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-action-primary",
+      "textPosition": "LEFT"
+    }
+  },
+  "flex-layout.row#container-slider-share1": {
+    "children": ["flex-layout.col#container-slider-share1"],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["container-slider-row-share1"]
+    }
+  },
+  "flex-layout.col#container-slider-share1": {
+    "children": ["slider-layout#share1"],
+    "props": {
+      "width": "90%",
+      "blockClass": ["container-slider-share1"]
+    }
+  },
+  "slider-layout#share1": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": false,
+      "centerMode": "to-the-left",
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "blockClass": "carousel-share1"
+    },
+    "children": [
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content",
+      "flex-layout.row#container-share-content"
+    ]
+  },
+
+  "flex-layout.row#container-share-content": {
+    "children": [
+      "flex-layout.col#container-share-content"
+    ],
+    "props": {
+      "blockClass": ["container-share-content"]
+    }
+  },
+
+  "flex-layout.col#container-share-content": {
+    "children": [
+      "flex-layout.row#share1",
+      "flex-layout.row#content-share"
+    ],
+    "props": {
+      "blockClass": ["container-share-content"]
+    }
+  },
+
+  "flex-layout.row#share1": {
+    "children": ["image#share1"],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["col-share1"]
+    }
+  },
+  "image#share1": {
+    "props": {
+      "blockClass": ["share1"],
+      "maxHeight": 250,
+      "src": "assets/destaques.png"
+    }
+  },
+
+  "flex-layout.row#content-share": {
+    "children": ["flex-layout.col#text-content-share", "flex-layout.col#col-share-icon"],
+    "props": {
+      "blockClass": ["content-share"]
+    }
+  },
+
+  "flex-layout.col#text-content-share": {
+    "children": ["rich-text#text-title-share", "rich-text#text-content-share"],
+    "props": {
+      "width": "80%",
+      "blockClass": ["text-content-share"]
+    }
+  },
+
+  "rich-text#text-title-share": {
+    "props": {
+      "blockClass": ["text-content-share"],
+      "font": "t-body",
+      "text": "**Pra Jogar**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-warning--faded",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#text-content-share": {
+    "props": {
+      "blockClass": ["text-content-share"],
+      "font": "t-body",
+      "text": "São mais de 50 \n jogos temáticos",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+
+  "flex-layout.col#col-share-icon": {
+    "children": ["image#share-icon"],
+    "props": {
+      "horizontalAlign": "right",
+      "blockClass": ["col-share-icon"]
+    }
+  },
+  "image#share-icon": {
+    "props": {
+      "blockClass": ["share-icon"],
+      "maxHeight": 20,
+      "src": "assets/share-icon.png"
+    }
+  },
+  "flex-layout.row#share-text-slider2": {
+    "children": ["rich-text#lancamentos-moana"],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": ["share-slider2"]
+    }
+  },
+  "rich-text#lancamentos-moana": {
+    "props": {
+      "blockClass": ["lancamentos-moana"],
+      "font": "t-body",
+      "text": "Lançamentos **Moana**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-action-primary",
+      "textPosition": "LEFT"
     }
   }
 }

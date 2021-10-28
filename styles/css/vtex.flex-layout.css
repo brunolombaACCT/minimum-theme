@@ -1,0 +1,88 @@
+.flexRow--container-header,
+.flexRow--menu {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flexRowContent--container960home {
+  background-color: #FEEBF2;
+}
+
+.flexRowContent--title-slider-princesas {
+  margin-bottom: 30px;
+}
+
+.flexRowContent--text-presentes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.flexRowContent--products-list {
+  background: #FFF;
+  border-radius: 20px;
+}
+
+.flexCol--infos-product {
+  align-items: start;
+  padding: 10px;
+  justify-content: center;
+  text-align: left;
+}
+
+.flexRow--slider-destaques {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.flexRow--background-white {
+  background-color: #FFF;
+  height: 80px;
+}
+
+.flexRow--container-slider-row-destaques {
+  margin-bottom: 170px;
+}
+
+.flexRow--row-share {
+  background: linear-gradient(to right, #D54C61, #E27D8F);
+}
+
+.flexColChild--logo-text {
+  display: flex;
+  justify-content: center;
+}
+
+.flexRow--container-share-content {
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.flexRow--container-share-content {
+  width: 100%;
+}
+
+.flexRow--content-share {
+  margin-top: 30px;
+}
+
+.flexRowContent--container-slider-row-share1 {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.flexRow--footer {
+  box-shadow: 0 5px 10px 3px #FFF;
+  background: linear-gradient(to right, #D54C61, #E27D8F);
+}
+
+/* Mobile -------------------------- */
+.flexRow--m-logo-princesas-header {
+  background: linear-gradient(to right, #D54C61, #E27D8F);
+  padding-bottom: 10px;
+}
+
+.flexRowContent--title-slider-princesas {
+  display: flex;
+}

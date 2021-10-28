@@ -12,15 +12,63 @@
       "flex-layout.row#footer"
     ]
   },
-  "flex-layout.row#footer": { 
+  "flex-layout.row#footer": {
     "children": [
-      "image"
-    ]
-  },
-  "image": {
+      "flex-layout.col#col-footer"
+
+    ],
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "blockClass": "footer"
+    }
+  },
+
+  "flex-layout.col#col-footer": {
+    "children": [
+      "image#logo-rihappy-footer",
+      "image#logo-princesas-footer",
+      "rich-text#text-logo-footer",
+      "rich-text#copyright"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": ["col-footer"]
+    }
+  },
+
+  "image#logo-rihappy-footer": {
+    "props": {
+      "blockClass": ["logo-footer"],
+      "maxHeight": 40,
+      "src": "assets/logo-rihappy.png"
+    }
+  },
+  "image#logo-princesas-footer": {
+    "props": {
+      "blockClass": ["logo-princeses-footer"],
+      "maxHeight": 77,
+      "src": "assets/UPC_logo_A.png"
+    }
+  },
+
+  "rich-text#text-logo-footer": {
+    "props": {
+      "blockClass": ["text-logo-footer"],
+      "font": "t-body",
+      "text": "Aqui tem tudo de\n Disney Princesa.",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-action-primary",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "rich-text#copyright": {
+    "props": {
+      "blockClass": ["copyright"],
+      "font": "t-body",
+      "text": "Copyright 2021 - Ri Happy Brinquedos S/A - Todos os direitos reservados\n CNPJ 58.731.662/0001-11 - IE 142.145.578.110",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-action-primary",
+      "textPosition": "CENTER"
     }
   }
 }

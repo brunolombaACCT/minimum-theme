@@ -1,0 +1,43 @@
+{
+  "product-summary.shelf#demo1": {
+    "children": [
+      "flex-layout.row#products-list"
+    ]
+  },
+  "flex-layout.row#products-list": {
+    "children": [
+      "flex-layout.col#imagem", 
+      "flex-layout.col#infos-product"
+    ],
+    "props": {
+      "blockClass": ["products-list"]
+    }
+  },
+  "flex-layout.col#imagem": {
+    "children": ["product-summary-image"],
+    "props": {
+      "blockClass": ["imagem"]
+    }
+  },
+
+  "flex-layout.col#infos-product": {
+    "children": [
+      "product-summary-name",
+      "product-selling-price",
+      "product-installments",
+      "product-price-savings"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["infos-product"]
+    }
+  },
+  "product-summary-image#shelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "maxWidth": 100
+    }
+  }
+}

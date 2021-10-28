@@ -1,0 +1,9 @@
+.container--sticky-header {
+  background: linear-gradient(to right, #D54C61, #E27D8F);
+}
+
+/* Mobile ----------------------------*/
+.container {
+  background: linear-gradient(to right, #D54C61, #E27D8F);
+  padding: 10px 0 0 0;
+}

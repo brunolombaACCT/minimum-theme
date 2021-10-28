@@ -1,0 +1,122 @@
+.paragraph {
+  margin: 0;
+  font-size: 14px;
+}
+
+.paragraph--text-princess {
+  margin: 0;
+  margin-top: -10px;
+  font-size: 12px;
+}
+.paragraph--text-login {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.link--text-login {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.paragraph--location {
+  font-size: 12px;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.link--location {
+  color: #FFF;
+}
+
+.paragraph--text-produtos {
+  background:#FFF;
+  border-radius: 50px;
+  padding: 6px;
+  padding-right: 10px;
+  padding-left: 50px;
+  margin-left: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: -90px;
+}
+
+.strong--text-share1 {
+  font-size: 16px;
+}
+
+.paragraph--text-share2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.paragraph--especiais-frozen {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.paragraph--text-content-share {
+  font-size: 11px;
+}
+
+.paragraph--lancamentos-moana {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.paragraph--text-logo-footer {
+  font-size: 12px;
+}
+
+.paragraph--copyright {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Mobile -------------------------------- */
+.container--text-localization {
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .paragraph--text-produtos {
+    background:#FFF;
+    border-radius: 50px;
+    padding: 6px;
+    padding-right: 10px;
+    padding-left: 50px;
+    margin-left: 185px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-right: -90px;
+  }
+
+  .strong--text-title-princesas-1 {
+    margin-left: 10px;
+  }
+
+  .strong--text-title-princesas-1,
+  .strong--text-title-princesas-2 {
+    font-size: 18px;
+  }
+
+  .paragraph--text-mulan,
+  .paragraph--text-pocahontas {
+    font-size: 10px;
+  }
+
+  .paragraph--text-ofertas1-bold {
+    font-size: 18px;
+  }
+
+  .paragraph--text-ofertas2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+
+  .paragraph--text-ofertas1-bold,
+  .paragraph--text-ofertas2 {
+    margin-left: 10px;
+  } 
+}
